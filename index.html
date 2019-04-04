@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musically</title>
+    <link rel="icon" type="image/ico" href="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/Music-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" id="menu">
+                <h1 id="title">Musically</h1>
+                <input type="image" id="ear-training" src="https://mucdn.musical-u.com/wp-content/themes/Divi-MU/img/MU-Topic-ear-training.png">
+                <br>
+                <br>
+                <input type="image" id="sheet-music" src="https://cdn2.iconfinder.com/data/icons/university-set-3/512/7-512.png">
+                <br>
+                <br>
+                <b>Difficulty:</b>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="3" value="1" step="1" class="slider" id="myRange">
+                </div>
+                <div class="difficulties">
+                    <div id="easy">
+                        Easy
+                    </div>
+                    <div id="medium">
+                        Medium
+                    </div>
+                    <div id="hard">
+                        Hard
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9" id="content" style="border-left: 1px solid black">
+                <div id="easy-ear-training">
+                    Easy Ear Training
+                </div>
+                <div id="medium-ear-training">
+                    Medium Ear Training
+                </div>
+                <div id="hard-ear-training">
+                    Hard Ear Training
+                </div>
+                <div id="easy-sheet-music">
+                    <img src="https://www.true-piano-lessons.com/images/xgrandstaffnotechartmidc.jpg.pagespeed.ic.jmIiC1C4BL.jpg" class="staff" width="75%" height="75%">
+                    <br>
+                    <div class="questions" id="esc-Q1">
+                        <h4>Question 1:</h4>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Middle_C.png" class="staff" width="25%" height="25%">
+                    </div>
+                </div>
+                <div id="medium-sheet-music">
+                    Medium Sheet Music
+                    <img src="https://www.true-piano-lessons.com/images/xgrandstaffnotechartmidc.jpg.pagespeed.ic.jmIiC1C4BL.jpg" class="staff" width="75%" height="75%">
+                </div>
+                <div id="hard-sheet-music">
+                    Hard Sheet Music
+                    <img src="https://www.true-piano-lessons.com/images/xgrandstaffnotechartmidc.jpg.pagespeed.ic.jmIiC1C4BL.jpg" class="staff" width="75%" height="75%">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        var slider = document.getElementById("myRange");
+        var content_section;
+
+        function HideContent(){
+            $("#easy-ear-training").hide();
+            $("#medium-ear-training").hide();
+            $("#hard-ear-training").hide();
+            $("#easy-sheet-music").hide();
+            $("#medium-sheet-music").hide();
+            $("#hard-sheet-music").hide();
+        }
+
+        HideContent();
+
+        $("#ear-training").on("click", function(){
+            HideContent();
+            content_section = "ear-training";
+            if(slider.value == 1){
+                $("#easy-ear-training").show();
+            }
+            else if(slider.value == 2){
+                $("#medium-ear-training").show();
+            }
+            else if(slider.value == 3){
+                $("#hard-ear-training").show();
+            }
+            document.getElementById("sheet-music").style.background = "none";
+            document.getElementById("ear-training").style.background = "cyan";
+        })
+
+        $("#sheet-music").on("click", function(){
+            HideContent();
+            content_section = "sheet-music";
+            if(slider.value == 1){
+                $("#easy-sheet-music").show();
+            }
+            else if(slider.value == 2){
+                $("#medium-sheet-music").show();
+            }
+            else if(slider.value == 3){
+                $("#hard-sheet-music").show();
+            }
+            document.getElementById("ear-training").style.background = "none";
+            document.getElementById("sheet-music").style.background = "cyan";
+        });
+
+        slider.oninput = function(){
+            HideContent();
+            if(this.value == 1){
+                if(content_section == "ear-training"){
+                    $("#easy-ear-training").show();
+                }
+                else if(content_section == "sheet-music"){
+                    $("#easy-sheet-music").show();
+                }
+            }
+            else if(this.value == 2){
+                if(content_section == "ear-training"){
+                    $("#medium-ear-training").show();
+                }
+                else if(content_section == "sheet-music"){
+                    $("#medium-sheet-music").show();
+                }
+            }
+            else if(this.value == 3){
+                if(content_section == "ear-training"){
+                    $("#hard-ear-training").show();
+                }
+                else if(content_section == "sheet-music"){
+                    $("#hard-sheet-music").show();
+                }
+            }
+        }
+
+    });
+
+</script>
+</html>
