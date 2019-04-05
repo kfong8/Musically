@@ -39,13 +39,16 @@
             </div>
             <div class="col-md-9" id="content" style="border-left: 1px solid black">
                 <div id="easy-ear-training">
-                    Easy Ear Training
+                    <h4 style="text-align: center;">Question 1: (Press to play note)</h4>
+                    <input type="image" class="note-audio" id="eet-Q1" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" width="25%" height="25%">
                 </div>
                 <div id="medium-ear-training">
-                    Medium Ear Training
+                    <h4 style="text-align: center;">Question 1: (Press to play note)</h4>
+                    <input type="image" class="note-audio" id="met-Q1" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" width="25%" height="25%">                    
                 </div>
                 <div id="hard-ear-training">
-                    Hard Ear Training
+                    <h4 style="text-align: center;">Question 1: (Press to play note)</h4>
+                    <input type="image" class="note-audio" id="het-Q1" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" width="25%" height="25%">                    
                 </div>
                 <div id="easy-sheet-music">
                     <img src="https://www.true-piano-lessons.com/images/xgrandstaffnotechartmidc.jpg.pagespeed.ic.jmIiC1C4BL.jpg" class="staff" width="75%" height="75%">
@@ -107,6 +110,19 @@
             </div>
         </div>
     </div>
+    <audio id="C4" src="Resources/piano_middle_C.mp3"></audio>
+    <audio id="C#4" src="Resources/piano_C_sharp.mp3"></audio>
+    <audio id="D4" src="Resources/piano_D.mp3"></audio>
+    <audio id="D#4" src="Resources/piano_D_sharp.mp3"></audio>
+    <audio id="E4" src="Resources/piano_E.mp3"></audio>
+    <audio id="F4" src="Resources/piano_F.mp3"></audio>
+    <audio id="F#4" src="Resources/piano_F_sharp.mp3"></audio>
+    <audio id="G4" src="Resources/piano_G.mp3"></audio>
+    <audio id="G#4" src="Resources/piano_G_sharp.mp3"></audio>
+    <audio id="A4" src="Resources/piano_A.mp3"></audio>
+    <audio id="A#4" src="Resources/piano_A_sharp.mp3"></audio>
+    <audio id="B4" src="Resources/piano_B.mp3"></audio>
+
 </body>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -198,6 +214,21 @@
             document.getElementById("black_key_5").style.background = "black";
         }
 
+        $("#eet-Q1").on("click", function(){
+            var sound = document.getElementById("C4");
+            sound.play();
+        })
+
+        $("#met-Q1").on("click", function(){
+            var sound = document.getElementById("A#4");
+            sound.play();
+        })
+
+        $("#het-Q1").on("click", function(){
+            var sound = document.getElementById("F4");
+            sound.play();
+        })
+
         $("#octave1").on("click", function(){
             octave_choice = 1;
             ResetOctaveColors();
@@ -248,10 +279,19 @@
         })
 
         $("#c_key").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("C4");
+                        sound.play();
+                        break;
+            }
             if(slider.value == 1 && content_section == "sheet-music" && octave_choice == 4){
                 document.getElementById("c_key").style.background = "green";
             }
             else if(slider.value == 3 && content_section == "sheet-music" && octave_choice == 3){
+                document.getElementById("c_key").style.background = "green";
+            }
+            else if(slider.value == 1 && content_section == "ear-training" && octave_choice == 4){
                 document.getElementById("c_key").style.background = "green";
             }
             else{
@@ -260,47 +300,121 @@
         })
 
         $("#d_key").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("D4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("d_key").style.background = "red";
         })
 
         $("#e_key").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("E4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("e_key").style.background = "red";
         })
 
         $("#f_key").on("click", function(){
-            document.getElementById("f_key").style.background = "red";
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("F4");
+                        sound.play();
+                        break;
+            }
+            if(slider.value == 3 && content_section == "ear-training" && octave_choice == 4){
+                document.getElementById("f_key").style.background = "green";
+            }
+            else{
+                document.getElementById("f_key").style.background = "red";
+            }
         })
 
         $("#g_key").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("G4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("g_key").style.background = "red";
         })
 
         $("#a_key").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("A4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("a_key").style.background = "red";
         })
 
         $("#b_key").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("B4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("b_key").style.background = "red";
         })
 
         $("#black_key_1").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("C#4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("black_key_1").style.background = "red";
         })
 
         $("#black_key_2").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("D#4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("black_key_2").style.background = "red";
         })
 
         $("#black_key_3").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("F#4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("black_key_3").style.background = "red";
         })
 
         $("#black_key_4").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("G#4");
+                        sound.play();
+                        break;
+            }
             document.getElementById("black_key_4").style.background = "red";
         })
 
         $("#black_key_5").on("click", function(){
+            var sound;
+            switch(octave_choice){
+                case 4: sound= document.getElementById("A#4");
+                        sound.play();
+                        break;
+            }
             if(slider.value == 2 && content_section == "sheet-music" && octave_choice == 4){
+                document.getElementById("black_key_5").style.background = "green";
+            }
+            else if(slider.value == 2 && content_section == "ear-training" && octave_choice == 4){
                 document.getElementById("black_key_5").style.background = "green";
             }
             else{
