@@ -7,189 +7,233 @@
     <title>Musically</title>
     <link rel="icon" type="image/ico" href="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/Music-icon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3" id="menu">
-                <h1 id="title">Musically</h1>
-                <input type="image" id="ear-training" src="https://mucdn.musical-u.com/wp-content/themes/Divi-MU/img/MU-Topic-ear-training.png">
-                <br>
-                <br>
-                <input type="image" id="sheet-music" src="https://cdn2.iconfinder.com/data/icons/university-set-3/512/7-512.png">
-                <br>
-                <br>
-                <b>Difficulty:</b>
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="3" value="1" step="1" class="slider" id="myRange">
-                </div>
-                <div class="difficulties">
-                    <div id="easy">
-                        Easy
-                    </div>
-                    <div id="medium">
-                        Medium
-                    </div>
-                    <div id="hard">
-                        Hard
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9" id="content" style="border-left: 1px solid black">
-                <div id="easy-ear-training">
-                    <h4 style="text-align: center;">Question 1: (Press to play note)</h4>
-                    <input type="image" class="note-audio" id="eet-Q1" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" width="25%" height="25%">
-                </div>
-                <div id="medium-ear-training">
-                    <h4 style="text-align: center;">Question 1: (Press to play note)</h4>
-                    <input type="image" class="note-audio" id="met-Q1" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" width="25%" height="25%">                    
-                </div>
-                <div id="hard-ear-training">
-                    <h4 style="text-align: center;">Question 1: (Press to play note)</h4>
-                    <input type="image" class="note-audio" id="het-Q1" src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" width="25%" height="25%">                    
-                </div>
-                <div id="easy-sheet-music">
-                    <img src="https://www.true-piano-lessons.com/images/xgrandstaffnotechartmidc.jpg.pagespeed.ic.jmIiC1C4BL.jpg" class="staff" width="75%" height="75%">
-                    <br>
-                    <div class="questions" id="esm-Q1">
-                        <h4>Question 1:</h4>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Middle_C.png" class="staff" width="25%" height="25%">
-                    </div>
-                </div>
-                <div id="medium-sheet-music">
-                    <img src="https://www.true-piano-lessons.com/images/xgrandstaffnotechartmidc.jpg.pagespeed.ic.jmIiC1C4BL.jpg" class="staff" width="75%" height="75%">
-                    <br>
-                    <div class="questions" id="msm-Q1">
-                        <h4>Question 1:</h4>
-                        <img src="http://www.daisyappeal.org/wp-content/uploads/2016/06/do-re-mi.jpg" class="staff" width="25%" height="25%">
-                    </div>
-                </div>
-                <div id="hard-sheet-music">
-                    <img src="https://www.true-piano-lessons.com/images/xgrandstaffnotechartmidc.jpg.pagespeed.ic.jmIiC1C4BL.jpg" class="staff" width="75%" height="75%">
-                    <br>
-                    <div class="questions" id="hsm-Q1">
-                        <h4>Question 1:</h4>
-                        <img src="https://www.quia.com/files/quia/users/troykay5/musicnotesbass/C" class="staff" width="25%" height="25%">
-                    </div>
-                </div>
-                <br>
-                <div class="octave-selection">
-                    <b>Select Octave (Selection of Full Note Range)</b>
-                    <div class="btn-group">
-                        <input type="button" class="btn" value="     1     " id="octave1" style="color: DodgerBlue; border: 2px solid black;">
-                        <input type="button" class="btn" value="     2     " id="octave2" style="color: DodgerBlue; border: 2px solid black;">
-                        <input type="button" class="btn" value="     3     " id="octave3" style="color: DodgerBlue; border: 2px solid black;">
-                        <input type="button" class="btn" value="     4     " id="octave4" style="color: DodgerBlue; border: 2px solid black; background: #33FFFF">
-                        <input type="button" class="btn" value="     5     " id="octave5" style="color: DodgerBlue; border: 2px solid black;">
-                        <input type="button" class="btn" value="     6     " id="octave6" style="color: DodgerBlue; border: 2px solid black;">
-                        <input type="button" class="btn" value="     7     " id="octave7" style="color: DodgerBlue; border: 2px solid black;">
-                    </div>
-                </div>
-                <br>
-                <div class="piano">
-                    <b>Select Answer By Pressing Corresponding Piano Key</b>
-                    <div class="btn-group" id="white-keys">
-                        <input type="button" class="btn" value="    C    " id="c_key" style="padding-top: 160px; color: DodgerBlue; height: 200px; border: 2px solid black;">
-                        <input type="button" class="btn" value="    D    " id="d_key" style="padding-top: 160px; color: DodgerBlue; height: 200px; border: 2px solid black;">
-                        <input type="button" class="btn" value="    E    " id="e_key" style="padding-top: 160px; color: DodgerBlue; height: 200px; border: 2px solid black;">
-                        <input type="button" class="btn" value="    F    " id="f_key" style="padding-top: 160px; color: DodgerBlue; height: 200px; border: 2px solid black;">
-                        <input type="button" class="btn" value="    G    " id="g_key" style="padding-top: 160px; color: DodgerBlue; height: 200px; border: 2px solid black;">
-                        <input type="button" class="btn" value="    A    " id="a_key" style="padding-top: 160px; color: DodgerBlue; height: 200px; border: 2px solid black;">
-                        <input type="button" class="btn" value="    B    " id="b_key" style="padding-top: 160px; color: DodgerBlue; height: 200px; border: 2px solid black;">
-                    </div>
-                    <div style="margin-top: -200px;" id="black-keys">
-                        <input type="button" class="btn" value="Db C#" id="black_key_1" style="padding-top: 70px; color: DodgerBlue; height: 140px; white-space: normal; width: 44px; background: black; display: inline-block; position: relative; z-index: 1;">
-                        <input type="button" class="btn" value="Eb D#" id="black_key_2" style="margin-left: 24px; padding-top: 70px; color: DodgerBlue; height: 140px; white-space: normal; width: 44px; background: black; display: inline-block; position: relative; z-index: 1;">
-                        <input type="button" class="btn" value="Gb F#" id="black_key_3" style="margin-left: 94px; padding-top: 70px; color: DodgerBlue; height: 140px; white-space: normal; width: 44px; background: black; display: inline-block; position: relative; z-index: 1;">
-                        <input type="button" class="btn" value="Ab G#" id="black_key_4" style="margin-left: 24px; padding-top: 70px; color: DodgerBlue; height: 140px; white-space: normal; width: 44px; background: black; display: inline-block; position: relative; z-index: 1;">
-                        <input type="button" class="btn" value="Bb A#" id="black_key_5" style="margin-left: 24px; padding-top: 70px; color: DodgerBlue; height: 140px; white-space: normal; width: 44px; background: black; display: inline-block; position: relative; z-index: 1;">
-                    </div>
-                </div>
-            </div>
+    <div class="home">
+        <h1 id="title" style="font-size: 5vw;">Musically</h1>
+        <br>
+        <b style="font-size: 1vw;">Select a Mode (Ear Training or Sheet Music)</b>
+        <br>
+        <button class="btn" id="ear-training">
+            <img src="https://mucdn.musical-u.com/wp-content/themes/Divi-MU/img/MU-Topic-ear-training.png" style="width:10vw; border-radius: 20%">
+        </button>
+        <button class="btn" id="sheet-music">
+            <img src="https://cdn2.iconfinder.com/data/icons/university-set-3/512/7-512.png" style="width:10vw; border-radius: 20%">
+        </button>
+    </div>
+
+    <div class="header">
+        <h1 id="title" style="font-size: 5vw;">Musically</h1>
+        <button class="btn" id="home">
+            <img src="https://image.flaticon.com/icons/svg/25/25694.svg" style="width:5vw; border-radius: 20%">
+        </button>
+        <br>
+    </div>
+    
+    <div class="difficulty-selection">
+        <b style="font-size: 2vw" id="content-choice">Content Choice</b>
+        <div class="difficulties">
+            <button class="btn" id="beginner">Beginner</button>
+            <br>
+            <br>
+            <button class="btn" id="intermediate">Intermediate</button>
+            <br>
+            <br>
+            <button class="btn" id="advanced">Advanced</button>
         </div>
     </div>
-    <audio id="C4" src="Resources/piano_middle_C.mp3"></audio>
-    <audio id="C#4" src="Resources/piano_C_sharp.mp3"></audio>
-    <audio id="D4" src="Resources/piano_D.mp3"></audio>
-    <audio id="D#4" src="Resources/piano_D_sharp.mp3"></audio>
-    <audio id="E4" src="Resources/piano_E.mp3"></audio>
-    <audio id="F4" src="Resources/piano_F.mp3"></audio>
-    <audio id="F#4" src="Resources/piano_F_sharp.mp3"></audio>
-    <audio id="G4" src="Resources/piano_G.mp3"></audio>
-    <audio id="G#4" src="Resources/piano_G_sharp.mp3"></audio>
-    <audio id="A4" src="Resources/piano_A.mp3"></audio>
-    <audio id="A#4" src="Resources/piano_A_sharp.mp3"></audio>
-    <audio id="B4" src="Resources/piano_B.mp3"></audio>
+
+    <div class="question">
+        <b style="font-size: 2vw" id="question-number">Question</b>
+        <div class="ear-training-question">
+            <button class="btn" id="audio-note">
+                <img src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" style="width: 15vw; border: 2px solid black">
+            </button>
+        </div>
+        <div class="sheet-music-question">
+            <img src="" id="question-note" style="width: 15vw">
+        </div>
+    </div>
+
+    <div class="piano">
+        <div class="octave-selection">
+            <b style="font-size: 1vw">Select Octave (Full Note Range Selection)</b>
+            <br>
+            <div class="btn-group" style="width: 25%">
+                <button class="btn btn-octave-custom" id="octave1">1</button>
+                <button class="btn btn-octave-custom" id="octave2">2</button>
+                <button class="btn btn-octave-custom" id="octave3">3</button>
+                <button class="btn btn-octave-custom" id="octave4" style="background-color: #99ccff">4</button>
+                <button class="btn btn-octave-custom" id="octave5">5</button>
+                <button class="btn btn-octave-custom" id="octave6">6</button>
+                <button class="btn btn-octave-custom" id="octave7">7</button>
+            </div>
+        </div>
+
+        <b style="font-size: 1vw">Select Answer By Pressing Corresponding Piano Key</b>
+        <br>
+
+        <div class="btn-group" id="white-keys" style="width: 28%">
+            <button class="btn btn-white-custom" id="c_key">C</button>
+            <button class="btn btn-white-custom" id="d_key">D</button>
+            <button class="btn btn-white-custom" id="e_key">E</button>
+            <button class="btn btn-white-custom" id="f_key">F</button>
+            <button class="btn btn-white-custom" id="g_key">G</button>
+            <button class="btn btn-white-custom" id="a_key">A</button>
+            <button class="btn btn-white-custom" id="b_key">B</button>
+        </div>
+        <div id="black-keys">
+            <div style="margin-top: -15vw; height: 9vw">
+                <button class="btn btn-black-custom" id="black_key_1" style="margin-left:-20%; background: black">Db C#</button>
+            </div>
+            <div style="margin-top: -9vw; height: 9vw">
+                <button class="btn btn-black-custom" id="black_key_2" style="margin-left:-11.5%; background: black">Eb D#</button>
+            </div>
+            <div style="margin-top: -9vw; height: 9vw">
+                <button class="btn btn-black-custom" id="black_key_3" style="margin-left:3.5%; background: black">Gb F#</button>
+            </div>
+            <div style="margin-top: -9vw; height: 9vw">
+                <button class="btn btn-black-custom" id="black_key_4" style="margin-left:12%; background: black">Ab G#</button>
+            </div>
+            <div style="margin-top: -9vw; height: 9vw">
+                <button class="btn btn-black-custom" id="black_key_5" style="margin-left:20%; background: black">Bb A#</button>
+            </div>
+        </div>
+
+        <button class="btn" id="next" style="margin-left: 35%; margin-top: -9vw">
+            <img src="http://icons.iconarchive.com/icons/visualpharm/must-have/256/Next-icon.png" style="width:5vw; vertical-align: top">
+        </button>
+    </div>
+
+    <audio id="q-note-audio" src=""></audio>
+    <audio id="note" src=""></audio>
+    
 
 </body>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
 <script>
     $(document).ready(function(){
-        var slider = document.getElementById("myRange");
-        var content_section;
-        var octave_choice = 4;
+        var content_selection;
+        var octave_selection = 4;
+        var difficulty;
+        var question_number = 0;
+        var question_id;
+        var note_sound = document.getElementById("note");
+        var num_correct_on_first_try = 0;
+        var num_tries;
 
-        function HideContent(){
-            $("#easy-ear-training").hide();
-            $("#medium-ear-training").hide();
-            $("#hard-ear-training").hide();
-            $("#easy-sheet-music").hide();
-            $("#medium-sheet-music").hide();
-            $("#hard-sheet-music").hide();
+        function hideScreens(){
+            $(".home").hide();
+            $(".header").hide();
+            $(".difficulty-selection").hide();
+            $(".question").hide();
+            $(".piano").hide();
+            $("#next").hide();
+            $(".ear-training-question").hide();
+            $(".sheet-music-question").hide();
         }
 
-        $(".octave-selection").hide();
-        $(".piano").hide();
-        HideContent();
+        hideScreens();
+        $(".home").show();
 
-        $("#ear-training").on("click", function(){
-            HideContent();
-            ResetPianoColors();
-            content_section = "ear-training";
-            if(slider.value == 1){
-                $("#easy-ear-training").show();
-            }
-            else if(slider.value == 2){
-                $("#medium-ear-training").show();
-            }
-            else if(slider.value == 3){
-                $("#hard-ear-training").show();
-            }
-
-            $(".octave-selection").show();
-            $(".piano").show();
-
-            document.getElementById("sheet-music").style.background = "none";
-            document.getElementById("ear-training").style.background = "cyan";
+        $("#home").on("click", function(){
+            hideScreens();
+            $(".home").show();
+            question_number = 0;
+            num_correct_on_first_try = 0;
+            num_tries = 0;
+            ResetPiano();
         })
 
-        $("#sheet-music").on("click", function(){
-            HideContent();
-            ResetPianoColors();
-            content_section = "sheet-music";
-            if(slider.value == 1){
-                $("#easy-sheet-music").show();
-            }
-            else if(slider.value == 2){
-                $("#medium-sheet-music").show();
-            }
-            else if(slider.value == 3){
-                $("#hard-sheet-music").show();
-            }
-
-            $(".octave-selection").show();
-            $(".piano").show();
-
-            document.getElementById("ear-training").style.background = "none";
-            document.getElementById("sheet-music").style.background = "cyan";
+        $("#ear-training").on("click", function(){
+            content_selection = "ear-training";
+            hideScreens();
+            $("#content-choice").html("Ear Training Mode");
+            $(".header").show();
+            $(".difficulty-selection").show();
         });
 
-        function ResetOctaveColors(){
+        $("#sheet-music").on("click", function(){
+            content_selection = "sheet-music";
+            hideScreens();
+            $("#content-choice").html("Sheet Music Mode");
+            $(".header").show();
+            $(".difficulty-selection").show();
+        });
+
+        function loadQuestion(){
+            question_number++;
+            var index;
+            $("#question-number").html("Question " + question_number);
+
+            if(content_selection == "sheet-music"){
+                switch(difficulty){
+                    case "beginner":    index = Math.floor(Math.random() * (35 - 0) + 0);
+                                        break;
+                    case "intermediate":    index = Math.floor(Math.random() * (49 - 0) + 0);
+                                            break;
+                    case "advanced":    index = Math.floor(Math.random() * (119 - 0) + 0);
+                                        break;
+                }
+                $("#question-note").attr('src', sheetMusicQuestions[index][0]);
+                $(".sheet-music-question").show();
+            }
+
+            else if(content_selection == "ear-training"){
+                switch(difficulty){
+                    case "beginner":    index = Math.floor(Math.random() * (21 - 0) + 0);
+                                        break;
+                    case "intermediate":    index = Math.floor(Math.random() * (49 - 0) + 0);
+                                            break;
+                    case "advanced":    index = Math.floor(Math.random() * (84 - 0) + 0);
+                                        break;
+                }
+                $("#q-note-audio").attr("src", earTrainingQuestions[index][0]);
+                $(".ear-training-question").show();
+            }
+            question_id = index;
+            num_tries = 0;
+            $(".piano").show();
+        }
+
+        $("#audio-note").on("click", function(){
+            var q_audio = document.getElementById("q-note-audio");
+            q_audio.currentTime = 0;
+            q_audio.play();
+        })
+
+        $("#beginner").on("click", function(){
+            difficulty = "beginner";
+            hideScreens();
+            $(".header").show();
+            loadQuestion();
+            $(".question").show();
+        });
+
+        $("#intermediate").on("click", function(){
+            difficulty = "intermediate";
+            hideScreens();
+            $(".header").show();
+            loadQuestion();
+            $(".question").show();
+        });
+
+        $("#advanced").on("click", function(){
+            difficulty = "advanced";
+            hideScreens();
+            $(".header").show();
+            loadQuestion();
+            $(".question").show();
+        });
+
+        function ResetOctave(){
             document.getElementById("octave1").style.background = "none";
             document.getElementById("octave2").style.background = "none";
             document.getElementById("octave3").style.background = "none";
@@ -199,7 +243,7 @@
             document.getElementById("octave7").style.background = "none";
         }
 
-        function ResetPianoColors(){
+        function ResetPiano(){
             document.getElementById("c_key").style.background = "none";
             document.getElementById("d_key").style.background = "none";
             document.getElementById("e_key").style.background = "none";
@@ -214,85 +258,112 @@
             document.getElementById("black_key_5").style.background = "black";
         }
 
-        $("#eet-Q1").on("click", function(){
-            var sound = document.getElementById("C4");
-            sound.play();
-        })
-
-        $("#met-Q1").on("click", function(){
-            var sound = document.getElementById("A#4");
-            sound.play();
-        })
-
-        $("#het-Q1").on("click", function(){
-            var sound = document.getElementById("F4");
-            sound.play();
-        })
-
         $("#octave1").on("click", function(){
-            octave_choice = 1;
-            ResetOctaveColors();
-            ResetPianoColors();
-            document.getElementById("octave1").style.background = "#33FFFF";
+            octave_selection = 1;
+            ResetOctave();
+            ResetPiano();
+            document.getElementById("octave1").style.background = "#99ccff";
         })
 
         $("#octave2").on("click", function(){
-            octave_choice = 2;
-            ResetOctaveColors();
-            ResetPianoColors();
-            document.getElementById("octave2").style.background = "#33FFFF";
+            octave_selection = 2;
+            ResetOctave();
+            ResetPiano();
+            document.getElementById("octave2").style.background = "#99ccff";
         })
 
         $("#octave3").on("click", function(){
-            octave_choice = 3;
-            ResetOctaveColors();
-            ResetPianoColors();
-            document.getElementById("octave3").style.background = "#33FFFF";
+            octave_selection = 3;
+            ResetOctave();
+            ResetPiano();
+            document.getElementById("octave3").style.background = "#99ccff";
         })
 
         $("#octave4").on("click", function(){
-            octave_choice = 4;
-            ResetOctaveColors();
-            ResetPianoColors();
-            document.getElementById("octave4").style.background = "#33FFFF";
+            octave_selection = 4;
+            ResetOctave();
+            ResetPiano();
+            document.getElementById("octave4").style.background = "#99ccff";
         })
 
         $("#octave5").on("click", function(){
-            octave_choice = 5;
-            ResetOctaveColors();
-            ResetPianoColors();
-            document.getElementById("octave5").style.background = "#33FFFF";
+            octave_selection = 5;
+            ResetOctave();
+            ResetPiano();
+            document.getElementById("octave5").style.background = "#99ccff";
         })
 
         $("#octave6").on("click", function(){
-            octave_choice = 6;
-            ResetOctaveColors();
-            ResetPianoColors();
-            document.getElementById("octave6").style.background = "#33FFFF";
+            octave_selection = 6;
+            ResetOctave();
+            ResetPiano();
+            document.getElementById("octave6").style.background = "#99ccff";
         })
 
         $("#octave7").on("click", function(){
-            octave_choice = 7;
-            ResetOctaveColors();
-            ResetPianoColors();
-            document.getElementById("octave7").style.background = "#33FFFF";
+            octave_selection = 7;
+            ResetOctave();
+            ResetPiano();
+            document.getElementById("octave7").style.background = "#99ccff";
         })
 
+        $("#next").on("click", function(){
+            loadQuestion();
+            ResetPiano();
+            $("#next").hide();
+        })
+
+        function checkAnswer(key){
+            if(content_selection == "sheet-music"){
+                if(sheetMusicQuestions[question_id][2] == key && sheetMusicQuestions[question_id][3] == octave_selection){
+                    if(num_tries == 0){
+                        num_correct_on_first_try++;
+                        console.log(num_correct_on_first_try);
+                    }
+                    return true;
+                }
+                else{
+                    num_tries++;
+                    return false;
+                }
+            }
+            else if(content_selection == "ear-training"){
+                if(earTrainingQuestions[question_id][2] == key && earTrainingQuestions[question_id][3] == octave_selection){
+                    if(num_tries == 0){
+                        num_correct_on_first_try++;
+                        console.log(num_correct_on_first_try);
+                    }
+                    return true;
+                }
+                else{
+                    num_tries++;
+                    return false;
+                }
+            }
+        }
+
         $("#c_key").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("C4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[0][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[0][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[0][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[0][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[0][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[0][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[0][6]);
                         break;
             }
-            if(slider.value == 1 && content_section == "sheet-music" && octave_choice == 4){
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("C") == true){
                 document.getElementById("c_key").style.background = "green";
-            }
-            else if(slider.value == 3 && content_section == "sheet-music" && octave_choice == 3){
-                document.getElementById("c_key").style.background = "green";
-            }
-            else if(slider.value == 1 && content_section == "ear-training" && octave_choice == 4){
-                document.getElementById("c_key").style.background = "green";
+                $("#next").show();
             }
             else{
                 document.getElementById("c_key").style.background = "red";
@@ -300,34 +371,83 @@
         })
 
         $("#d_key").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("D4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[2][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[2][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[2][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[2][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[2][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[2][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[2][6]);
                         break;
             }
-            document.getElementById("d_key").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("D") == true){
+                document.getElementById("d_key").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("d_key").style.background = "red";
+            }
         })
 
         $("#e_key").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("E4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[4][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[4][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[4][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[4][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[4][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[4][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[4][6]);
                         break;
             }
-            document.getElementById("e_key").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("E") == true){
+                document.getElementById("e_key").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("e_key").style.background = "red";
+            }
         })
 
         $("#f_key").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("F4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[5][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[5][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[5][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[5][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[5][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[5][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[5][6]);
                         break;
             }
-            if(slider.value == 3 && content_section == "ear-training" && octave_choice == 4){
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("F") == true){
                 document.getElementById("f_key").style.background = "green";
+                $("#next").show();
             }
             else{
                 document.getElementById("f_key").style.background = "red";
@@ -335,123 +455,228 @@
         })
 
         $("#g_key").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("G4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[7][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[7][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[7][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[7][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[7][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[7][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[7][6]);
                         break;
             }
-            document.getElementById("g_key").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("G") == true){
+                document.getElementById("g_key").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("g_key").style.background = "red";
+            }
         })
 
         $("#a_key").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("A4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[9][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[9][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[9][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[9][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[9][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[9][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[9][6]);
                         break;
             }
-            document.getElementById("a_key").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("A") == true){
+                document.getElementById("a_key").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("a_key").style.background = "red";
+            }
         })
 
         $("#b_key").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("B4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[11][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[11][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[11][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[11][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[11][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[11][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[11][6]);
                         break;
             }
-            document.getElementById("b_key").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("B") == true){
+                document.getElementById("b_key").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("b_key").style.background = "red";
+            }
         })
 
         $("#black_key_1").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("C#4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[1][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[1][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[1][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[1][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[1][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[1][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[1][6]);
                         break;
             }
-            document.getElementById("black_key_1").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("Db") == true){
+                document.getElementById("black_key_1").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("black_key_1").style.background = "red";
+            }
         })
 
         $("#black_key_2").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("D#4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[3][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[3][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[3][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[3][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[3][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[3][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[3][6]);
                         break;
             }
-            document.getElementById("black_key_2").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("Eb") == true){
+                document.getElementById("black_key_2").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("black_key_2").style.background = "red";
+            }
         })
 
         $("#black_key_3").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("F#4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[6][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[6][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[6][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[6][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[6][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[6][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[6][6]);
                         break;
             }
-            document.getElementById("black_key_3").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("Gb") == true){
+                document.getElementById("black_key_3").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("black_key_3").style.background = "red";
+            }
         })
 
         $("#black_key_4").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("G#4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[8][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[8][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[8][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[8][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[8][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[8][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[8][6]);
                         break;
             }
-            document.getElementById("black_key_4").style.background = "red";
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("Ab") == true){
+                document.getElementById("black_key_4").style.background = "green";
+                $("#next").show();
+            }
+            else{
+                document.getElementById("black_key_4").style.background = "red";
+            }
         })
 
         $("#black_key_5").on("click", function(){
-            var sound;
-            switch(octave_choice){
-                case 4: sound= document.getElementById("A#4");
-                        sound.play();
+            switch(octave_selection){
+                case 1: $("#note").attr('src', noteSounds[10][0]);
+                        break;
+                case 2: $("#note").attr('src', noteSounds[10][1]);
+                        break;
+                case 3: $("#note").attr('src', noteSounds[10][2]);
+                        break;
+                case 4: $("#note").attr('src', noteSounds[10][3]);
+                        break;
+                case 5: $("#note").attr('src', noteSounds[10][4]);
+                        break;
+                case 6: $("#note").attr('src', noteSounds[10][5]);
+                        break;
+                case 7: $("#note").attr('src', noteSounds[10][6]);
                         break;
             }
-            if(slider.value == 2 && content_section == "sheet-music" && octave_choice == 4){
+            note_sound.currentTime = 0;
+            note_sound.play();
+            if(checkAnswer("Bb") == true){
                 document.getElementById("black_key_5").style.background = "green";
-            }
-            else if(slider.value == 2 && content_section == "ear-training" && octave_choice == 4){
-                document.getElementById("black_key_5").style.background = "green";
+                $("#next").show();
             }
             else{
                 document.getElementById("black_key_5").style.background = "red";
             }
         })
-
-        slider.oninput = function(){
-            HideContent();
-            ResetPianoColors();
-            if(this.value == 1){
-                if(content_section == "ear-training"){
-                    $("#easy-ear-training").show();
-                }
-                else if(content_section == "sheet-music"){
-                    $("#easy-sheet-music").show();
-                }
-            }
-            else if(this.value == 2){
-                if(content_section == "ear-training"){
-                    $("#medium-ear-training").show();
-                }
-                else if(content_section == "sheet-music"){
-                    $("#medium-sheet-music").show();
-                }
-            }
-            else if(this.value == 3){
-                if(content_section == "ear-training"){
-                    $("#hard-ear-training").show();
-                }
-                else if(content_section == "sheet-music"){
-                    $("#hard-sheet-music").show();
-                }
-            }
-        }
-
-    });
-
+    })
 </script>
 </html>
