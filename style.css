@@ -45,11 +45,7 @@
 }
 
 .difficulties{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin-top: 2vw;
     text-align: center;
 }
 
@@ -80,7 +76,13 @@
     background-color: #99ccff;
 }
 
+#progress{
+    margin-left: 5%;
+    text-align: center;
+}
+
 .question{
+    margin-top: -10vw;
     text-align: center;
 }
 

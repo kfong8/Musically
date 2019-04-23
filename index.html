@@ -35,6 +35,8 @@
     <div class="difficulty-selection">
         <b style="font-size: 2vw" id="content-choice">Content Choice</b>
         <div class="difficulties">
+            <b style="font-size: 1vw">Select a Difficulty</b>
+            <br>
             <button class="btn" id="beginner">Beginner</button>
             <br>
             <br>
@@ -45,16 +47,27 @@
         </div>
     </div>
 
+    <div id="progress" style="width: 20vw; height: 10vw" >
+        <b style="font-size: 1vw">Number Answered Correctly on First Try:</b>
+        <br>
+        <b style="font-size: 1vw" id="num-correct">Number Correct</b>
+    </div>
+
     <div class="question">
         <b style="font-size: 2vw" id="question-number">Question</b>
         <div class="ear-training-question">
             <button class="btn" id="audio-note">
-                <img src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" style="width: 15vw; border: 2px solid black">
+                <img src="https://i.etsystatic.com/10919371/r/il/155a7d/1563938723/il_570xN.1563938723_1rmr.jpg" style="width: 10vw; border: 2px solid black">
             </button>
         </div>
         <div class="sheet-music-question">
             <img src="" id="question-note" style="width: 15vw">
         </div>
+
+        <br>
+        <b style="font-size: 1.5vw">Identify the Note By Selecting the Octave and Piano Key</b>
+        <br>
+
     </div>
 
     <div class="piano">
@@ -138,6 +151,7 @@
             $("#next").hide();
             $(".ear-training-question").hide();
             $(".sheet-music-question").hide();
+            $("#progress").hide();
         }
 
         hideScreens();
@@ -169,11 +183,14 @@
         });
 
         function loadQuestion(){
+            $("#num-correct").html(num_correct_on_first_try + "/" + question_number + " Questions");
+
             question_number++;
             var index;
-            $("#question-number").html("Question " + question_number);
 
             if(content_selection == "sheet-music"){
+                $("#question-number").html("Question " + question_number);
+
                 switch(difficulty){
                     case "beginner":    index = Math.floor(Math.random() * (35 - 0) + 0);
                                         break;
@@ -187,6 +204,8 @@
             }
 
             else if(content_selection == "ear-training"){
+                $("#question-number").html("Question " + question_number + "(Press to Play Note)");
+
                 switch(difficulty){
                     case "beginner":    index = Math.floor(Math.random() * (21 - 0) + 0);
                                         break;
@@ -215,6 +234,7 @@
             $(".header").show();
             loadQuestion();
             $(".question").show();
+            $("#progress").show();
         });
 
         $("#intermediate").on("click", function(){
@@ -223,6 +243,7 @@
             $(".header").show();
             loadQuestion();
             $(".question").show();
+            $("#progress").show();
         });
 
         $("#advanced").on("click", function(){
@@ -231,6 +252,7 @@
             $(".header").show();
             loadQuestion();
             $(".question").show();
+            $("#progress").show();
         });
 
         function ResetOctave(){
@@ -318,7 +340,7 @@
                 if(sheetMusicQuestions[question_id][2] == key && sheetMusicQuestions[question_id][3] == octave_selection){
                     if(num_tries == 0){
                         num_correct_on_first_try++;
-                        console.log(num_correct_on_first_try);
+                        $("#num-correct").html(num_correct_on_first_try + "/" + question_number + " Questions");
                     }
                     return true;
                 }
@@ -331,7 +353,7 @@
                 if(earTrainingQuestions[question_id][2] == key && earTrainingQuestions[question_id][3] == octave_selection){
                     if(num_tries == 0){
                         num_correct_on_first_try++;
-                        console.log(num_correct_on_first_try);
+                        $("#num-correct").html(num_correct_on_first_try + "/" + question_number + " Questions");
                     }
                     return true;
                 }
