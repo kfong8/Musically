@@ -62,7 +62,7 @@
         </div>
         <div class="sheet-music-question">
             <img src="" id="question-note" style="width: 15vw">
-            <a href="https://upload.wikimedia.org/wikipedia/commons/4/41/Scientific_pitch_notation_octaves_of_C.png" target="_blank" id="help" style="font-size: 1vw">Need Help?</a>
+            <a href="help.html" target="_blank" id="help" style="font-size: 1vw">Need Help?</a>
         </div>
 
         <br>
@@ -198,8 +198,10 @@
                                         $("#help").show();
                                         break;
                     case "Intermediate":    index = Math.floor(Math.random() * (49 - 0) + 0);
+                                            $("#help").show();
                                             break;
                     case "Advanced":    index = Math.floor(Math.random() * (119 - 0) + 0);
+                                        $("#help").show();
                                         break;
                 }
                 $("#question-note").attr('src', sheetMusicQuestions[index][0]);
