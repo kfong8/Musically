@@ -62,6 +62,7 @@
         </div>
         <div class="sheet-music-question">
             <img src="" id="question-note" style="width: 15vw">
+            <a href="https://upload.wikimedia.org/wikipedia/commons/4/41/Scientific_pitch_notation_octaves_of_C.png" target="_blank" id="help" style="font-size: 1vw">Need Help?</a>
         </div>
 
         <br>
@@ -152,6 +153,7 @@
             $(".ear-training-question").hide();
             $(".sheet-music-question").hide();
             $("#progress").hide();
+            $("#help").hide();
         }
 
         hideScreens();
@@ -189,14 +191,15 @@
             var index;
 
             if(content_selection == "sheet-music"){
-                $("#question-number").html("Question " + question_number);
+                $("#question-number").html(difficulty + " Question " + question_number);
 
                 switch(difficulty){
-                    case "beginner":    index = Math.floor(Math.random() * (35 - 0) + 0);
+                    case "Beginner":    index = Math.floor(Math.random() * (35 - 0) + 0);
+                                        $("#help").show();
                                         break;
-                    case "intermediate":    index = Math.floor(Math.random() * (49 - 0) + 0);
+                    case "Intermediate":    index = Math.floor(Math.random() * (49 - 0) + 0);
                                             break;
-                    case "advanced":    index = Math.floor(Math.random() * (119 - 0) + 0);
+                    case "Advanced":    index = Math.floor(Math.random() * (119 - 0) + 0);
                                         break;
                 }
                 $("#question-note").attr('src', sheetMusicQuestions[index][0]);
@@ -204,14 +207,14 @@
             }
 
             else if(content_selection == "ear-training"){
-                $("#question-number").html("Question " + question_number + "(Press to Play Note)");
+                $("#question-number").html(difficulty + " Question " + question_number + "(Press to Play Note)");
 
                 switch(difficulty){
-                    case "beginner":    index = Math.floor(Math.random() * (21 - 0) + 0);
+                    case "Beginner":    index = Math.floor(Math.random() * (21 - 0) + 0);
                                         break;
-                    case "intermediate":    index = Math.floor(Math.random() * (49 - 0) + 0);
+                    case "Intermediate":    index = Math.floor(Math.random() * (49 - 0) + 0);
                                             break;
-                    case "advanced":    index = Math.floor(Math.random() * (84 - 0) + 0);
+                    case "Advanced":    index = Math.floor(Math.random() * (84 - 0) + 0);
                                         break;
                 }
                 $("#q-note-audio").attr("src", earTrainingQuestions[index][0]);
@@ -229,7 +232,7 @@
         })
 
         $("#beginner").on("click", function(){
-            difficulty = "beginner";
+            difficulty = "Beginner";
             hideScreens();
             $(".header").show();
             loadQuestion();
@@ -238,7 +241,7 @@
         });
 
         $("#intermediate").on("click", function(){
-            difficulty = "intermediate";
+            difficulty = "Intermediate";
             hideScreens();
             $(".header").show();
             loadQuestion();
@@ -247,7 +250,7 @@
         });
 
         $("#advanced").on("click", function(){
-            difficulty = "advanced";
+            difficulty = "Advanced";
             hideScreens();
             $(".header").show();
             loadQuestion();
